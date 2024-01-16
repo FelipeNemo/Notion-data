@@ -1,0 +1,23 @@
+{
+  "name": "notiondata",
+  "version": "0.0.1",
+  "description": "Ler dados de um arquivo csv e adiciona-los a uma pasta que criamos usando notionAPI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/FelipeNemo/Notion-data.git"
+  },
+  "keywords": [
+    "notion",
+    "data"
+  ],
+  "author": "Felipe Augusto Batista Mendes dos Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FelipeNemo/Notion-data/issues"
+  },
+  "homepage": "https://github.com/FelipeNemo/Notion-data#readme"
+}
