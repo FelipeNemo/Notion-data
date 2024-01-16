@@ -2,7 +2,8 @@
 
 import { Client } from "@notionhq/client"
 import { config } from "dotenv"
-import { propertiesForNewPages } from ".sampleData.js"
+import { propertiesForNewPages } from "./sampleData.js";
+
 
 config()
 
