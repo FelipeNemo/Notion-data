@@ -1,8 +1,10 @@
 // As propriedades do dataset(coluna) devem se conectar com as propriedades da página(linha)
-
+// Ao importarmos o modulo rightSample.js o programa executa. 
+// O modulo sampleData.js foi inspirado no rightSample.js contudo retorna  o erro: 'validation_error' status: 400
 import { Client } from "@notionhq/client"
 import { config } from "dotenv"
-import { propertiesForNewPages } from "./sampleData.js";
+import { propertiesForNewPages } from "./rightSample.js";
+//import { propertiesForNewPages } from "./sampleData.js";
 
 
 config()

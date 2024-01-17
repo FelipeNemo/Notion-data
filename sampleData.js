@@ -11,7 +11,7 @@ export const propertiesForNewPages = [];
 // Array para armazenar os dados do CSV
 const dadosCSV = [];
 
-// Ler o arquivo CSV e transformar em objeto JSON
+// Ler o arquivo CSV 
 fs.createReadStream(ArquivoCSV)
   .pipe(csv())
   .on('data', (linha) => {
@@ -42,6 +42,6 @@ fs.createReadStream(ArquivoCSV)
     // "..." concatena arrays
     propertiesForNewPages.push(...propriedadesAtualizadas);//Coloca as propriedades da página dentro do vetor que exportamos
     //console.log(propriedadesAtualizadas)
-    console.log(propriedadesAtualizadas);//Coloca as propriedades da página dentro do vetor que exportamos
+    console.log(propertiesForNewPages);// print do objeto das propriedadesAtualizadas
     
   });
