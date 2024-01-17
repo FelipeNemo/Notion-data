@@ -1,11 +1,7 @@
 // As propriedades do dataset(coluna) devem se conectar com as propriedades da página(linha)
-// Ao importarmos o modulo rightSample.js o programa executa. 
-// O modulo sampleData.js foi inspirado no rightSample.js contudo retorna  o erro: 'validation_error' status: 400
 import { Client } from "@notionhq/client"
 import { config } from "dotenv"
-import { propertiesForNewPages } from "./rightSample.js";
-//import { propertiesForNewPages } from "./sampleData.js";
-
+import { propertiesForNewPages } from "./dataRead.js";
 
 config()
 
@@ -16,8 +12,7 @@ const notion = new Client({ auth: apiKey })
 
 
 
-//CRIA A PASTA
-//No Banco de dados contido na página pai(Navegador>Página Pai>Página FIlha>Olhos do Usuário)
+//Cria a pasta
 async function AdicionandoPaginaAoBancoDeDados(databaseId, pageProperties) {   
   const newPage = await notion.pages.create({
     parent: { //Pagina pai
@@ -29,7 +24,7 @@ async function AdicionandoPaginaAoBancoDeDados(databaseId, pageProperties) {
 }
 
 
-//Criação do Banco de dados dentro da Pasta
+//Criação do Banco de dados dentro da Pasta 
 async function main() {
   const newDatabase = await notion.databases.create({
     parent: { //Página filha cria um filho
@@ -40,7 +35,7 @@ async function main() {
       {
         type: "text",
         text: {
-          content: "Grocery item",//Conteudo do titulo
+          content: "Grocery item",
         },
       },
     ],
@@ -53,7 +48,7 @@ async function main() {
       Price: {
         type: "number",
         number: {
-          format: "dollar",
+          format: "number",
         },
       },
       "Last ordered": {

@@ -25,21 +25,19 @@ fs.createReadStream(ArquivoCSV)
         "Grocery item": {
           type: "title",
           title: [{ type: "text", text: { content: item["Grocery item"] } }],
-
+          },
           Price: {
             type: "number",
             number: parseFloat(item.Price), // Converter para número
           },
-
           "Last ordered": {
             type: "date",
             date: { start: item["Last ordered"] },
-          },
-        },
+          },       
       };
     }); 
     
-    // "..." concatena arrays
+    // "..." é usado para concatenar arrays
     propertiesForNewPages.push(...propriedadesAtualizadas);//Coloca as propriedades da página dentro do vetor que exportamos
     //console.log(propriedadesAtualizadas)
     console.log(propertiesForNewPages);// print do objeto das propriedadesAtualizadas
